@@ -19,9 +19,10 @@ exports.questionThree = () => {
   console.log(answerThree([{
     name: "Bart"
   }])); //expected result: "Bart"
-  console.log([]); //expected result: ""
+  console.log(answerThree([])); //expected result: ""
 }
 
 const answerThree = (names) => {
   //code here
+  
 }
