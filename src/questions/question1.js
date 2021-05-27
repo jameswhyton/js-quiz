@@ -8,7 +8,14 @@ exports.questionOne = () => {
   console.log(answerOne("robot")); //tobor
 }
 
-const answerOne = (str) => {
+const answerOne = (val) => {
   //code here
-  
+  return val.split("").reverse().join("");
 }
+
+console.log(answerOne("I am hungry!"));
+console.log(answerOne("reward!"));
+console.log(answerOne("Ramen"));
+console.log(answerOne("robot"));
+
+console.log(answerOne("!notyhW semaJ si eman ruoY"));
