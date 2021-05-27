@@ -24,5 +24,40 @@ exports.questionThree = () => {
 
 const answerThree = (names) => {
   //code here
-  
+  if (names.length <= 1) {
+    return names.map(e => e.name).join('');
+  } else if (names.length <= 2) {
+    return names.map(e => e.name).join(" & ");
+  } else if (names.length > 2) {
+    return names.map(e => e.name).slice(0, -1).join(", ") + " & " + names.map(e => e.name).slice(-1);
+  }
 }
+
+console.log(answerThree([{
+  name: "Bart"
+}, {
+  name: "Lisa"
+}, {
+  name: "Maggie"
+}]));
+console.log(answerThree([{
+  name: "Bart"
+}, {
+  name: "Lisa"
+}]));
+console.log(answerThree([{
+  name: "Bart"
+}]));
+console.log(answerThree([]));
+
+console.log(answerThree([{
+  name: "Bart"
+}, {
+  name: "Lisa"
+}, {
+  name: "Maggie"
+}, {
+  name: "Homer"
+}, {
+  name: "Marge"
+}]));
