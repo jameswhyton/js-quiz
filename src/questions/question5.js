@@ -52,9 +52,4 @@ const answerFiveAsync = async () => { //answer with Async Await
   }
 }
 
-
-console.log(answerFiveAsync());
-
-
-
-//console.log(combinedDate);
+answerFiveAsync();
