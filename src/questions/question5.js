@@ -40,12 +40,12 @@ const answerFiveAsync = async () => { //answer with Async Await
 
     const employeeDob = response.data.map(e => Number(e.dateOfBirth.split("-").join(""))); //get the employees date of birth formatted to a number
     const over50Index = [] // variable to store indexes that meet below condition
-    employeeDob.forEach((e, i) => {
+    employeeDob.forEach((e, i) => { // for each to loop through employeeDob and check condition, pushing the index to variable each time it's met
       if (e <= combinedDate) {
         over50Index.push(i);
       }
     });
-    const over50Array = response.data.filter((el, i) => over50Index.some(j => i === j));
+    const over50Array = response.data.filter((el, i) => over50Index.some(j => i === j));//filtering the original response by the calculated index
     console.log(over50Array);
   } catch (err) {
     console.log(err);
